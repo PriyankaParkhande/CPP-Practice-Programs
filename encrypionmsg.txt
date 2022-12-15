@@ -1,0 +1,42 @@
+#include<iostream>
+#include<string.h>
+using namespace std;
+class encrypt
+{
+	private:
+char str[5];
+public:
+ encrypt(char s[])
+{
+	for(int i=0;i<5;i++)
+	{
+		str[i]=s[i];
+	}
+	}
+	void encryptmsg()
+	{
+			for(int i=0;i<5;i++)
+	{
+			
+		str[i]=str[i]+3;
+	}
+	cout<<"\n msg before encryption msg"<<"\t"<<str;
+		for(int i=5;i>=0;i--)
+	{
+		str[i]=str[i]-3;
+	}
+	cout<<"\n msg after encryption"<<"\t"<<str;
+		}	
+};
+int main()
+{
+char s[5];
+cout<<"enter msg u want to encrypt \n";
+	for(int i=0;i<5;i++)
+	{
+	cin>>s[i];
+	}
+	encrypt se(s);
+	se.encryptmsg();
+	return 0;
+}
